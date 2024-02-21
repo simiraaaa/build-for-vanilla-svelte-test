@@ -4,6 +4,10 @@ The purpose of this repository is to load a built Svelte component using a scrip
 
 `<script src="components.js"></script>`
 
+## vite.config.js
+
+https://github.com/simiraaaa/test-svelte-build-for-vanilla/blob/main/vite.config.js
+
 ## setup
 
 ```
@@ -83,7 +87,3 @@ git init && git add -A && git commit -m "Initial commit"
 
 
 ...
-
-
-**Please see the following log for commits**
-
