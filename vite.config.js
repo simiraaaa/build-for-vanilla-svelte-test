@@ -10,7 +10,8 @@ export default defineConfig(({ command }) => ({
 	build: {
 		lib: {
 			entry: resolve(__dirname, 'src/lib/index.js'),
-			name: 'Components',
+			// formats: ['umd'],
+			name: 'components',
 			fileName: 'components',
 		},
 		outDir: 'build',
