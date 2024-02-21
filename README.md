@@ -4,6 +4,39 @@ The purpose of this repository is to load a built Svelte component using a scrip
 
 `<script src="components.js"></script>`
 
+## setup
+
+```
+npm i
+
+```
+
+## build & check
+
+```
+npm run build
+```
+
+### Check only umd.cjs
+
+```
+open ./test.html
+```
+
+### Check es & umd
+
+```
+npx http-server
+```
+
+and open `http://127.0.0.1:port/test.html` in your browser.
+
+## development
+
+```
+npm run dev
+```
+
 ## memo
 
 - https://vitejs.dev/guide/build.html#library-mode
