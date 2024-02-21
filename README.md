@@ -2,12 +2,13 @@
 
 The purpose of this repository is to load a built Svelte component using a script tag.
 
-`<script src="./build.js"></script>`
+`<script src="components.js"></script>`
 
 ## memo
 
-https://vitejs.dev/guide/build.html#library-mode
-https://stackoverflow.com/questions/75832641/how-to-compile-svelte-3-components-into-iifes-that-can-be-used-in-vanilla-js
+- https://vitejs.dev/guide/build.html#library-mode
+- https://stackoverflow.com/questions/75832641/how-to-compile-svelte-3-components-into-iifes-that-can-be-used-in-vanilla-js
+- Unable to utilize aliases in svelte.config.js. For example, `$lib`.
 
 ## log
 
