@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Load Svelte components</title>
+</head>
+<body>
+  <div id="test"></div>
+  <div id="test-es"></div>
+  <div>
+    <button id="plus-button">+</button>
+    <button id="minus-button">-</button>
+  </div>
+  <script src="./build/components.umd.cjs"></script>
+
+  <script>
+    {
+      const testComponent = new components.Test({
+        target: document.getElementById('test'),
+        props: {
+          name: components.version,
+        },
+      });
+      testComponent.$on('increment', () => console.log('increment'));
+      testComponent.$on('decrement', () => console.log('decrement'));
+      document.getElementById('plus-button').addEventListener('click', () => testComponent.incrementCount());
+      document.getElementById('minus-button').addEventListener('click', () => testComponent.decrementCount());
+    }
+  </script>
+
+  <!-- please run: npx http-server -->
+  <script type="module">
+    import { Test, version } from './build/components.js';
+    console.log('Test:', Test, version);
+    const testComponent = new Test({
+      target: document.getElementById('test-es'),
+      props: {
+        name: version,
+      },
+    });
+
+    testComponent.$on('increment', () => console.log('increment'));
+    testComponent.$on('decrement', () => console.log('decrement'));
+    document.getElementById('plus-button').addEventListener('click', () => testComponent.incrementCount());
+    document.getElementById('minus-button').addEventListener('click', () => testComponent.decrementCount());
+  </script>
+</body>
+</html>
