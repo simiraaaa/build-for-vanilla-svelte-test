@@ -18,9 +18,13 @@
 </script>
 
 <style>
+  .test {
+    color: red;
+  }
 </style>
 
 <div>
   <h1>Hello, {name}!</h1>
   <p>Count: {count}</p>
+  <p class="test">css test</p>
 </div>
